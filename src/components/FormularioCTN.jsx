@@ -4,7 +4,7 @@ import "../styles/Formulario.css";
 export default function FormularioCTN({ tabla, setTabla, ctn, cerrarFormulario, obtenerDatos}){
     const [codigo, setCodigo] = useState("");
     const [fecha, setFecha] = useState("");
-    const [estado, setEstado] = useState("");
+    const [estado, setEstado] = useState("PLANIFICADO");
 
     useEffect(() => {
         if (ctn) {
@@ -28,14 +28,14 @@ export default function FormularioCTN({ tabla, setTabla, ctn, cerrarFormulario, 
 
         if(ctn){
         //EDITAR
-            await fetch(`http://localhost:5000/api/ctn/${ctn.id}`,{
+            await fetch(`https://backend-sistema-gestion.onrender.com/api/ctn/${ctn.id}`,{
                 method: "PUT",
                 headers: {"Content-Type":"application/json"},
                 body: JSON.stringify(datos)
             });
         } else{
         //CREAR
-            await fetch("http://localhost:5000/api/ctn", {
+            await fetch("https://backend-sistema-gestion.onrender.com/api/ctn", {
                 method: "POST",
                 headers: {"Content-Type": "application/json" },
                 body: JSON.stringify(datos)
@@ -58,9 +58,10 @@ export default function FormularioCTN({ tabla, setTabla, ctn, cerrarFormulario, 
         <div className="form-row">
             <label>Estado:</label>
             <select value={estado} onChange={(e) => setEstado(e.target.value)}>
-                <option value="ABIERTO">ABIERTO</option>
-                <option value="EN_PROCESO">EN_PROCESO</option>
+                <option value="PLANIFICADO">PLANIFICADO</option>
+                <option value="EN_PROCESO">EN PROCESO</option>
                 <option value="CERRADO">CERRADO</option>
+                <option value="EXPORTADO">EXPORTADO</option>
             </select>
         </div>
         <button type="submit" className="btn-guardar">{ctn ? "Actualizar" : "Guardar"}</button>

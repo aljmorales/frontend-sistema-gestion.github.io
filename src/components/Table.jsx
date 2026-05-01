@@ -24,11 +24,11 @@ export default function Table({ tabla, setTabla, setProductorEditando }) {
               <button
                 className="btn-eliminar"
                 onClick={async () => {
-                  await fetch(`http://localhost:5000/api/productores/${item.id}`, {
+                  await fetch(`https://backend-sistema-gestion.onrender.com/api/productores/${item.id}`, {
                     method: "DELETE"
                   });
                   // recargar datos
-                  const res = await fetch("http://localhost:5000/api/productores");
+                  const res = await fetch("https://backend-sistema-gestion.onrender.com/api/productores");
                   const data = await res.json();
                   setTabla(data.body);
                 }}
@@ -72,11 +72,11 @@ export function TableIngreso({ tabla, setTabla, setIngresoEditando }) {
               <button
                 className="btn-eliminar"
                 onClick={() => setTabla(tabla.filter(fila => fila.id !== item.id))}onClick={async () => {
-                  await fetch(`http://localhost:5000/api/ingresos/${item.id}`, {
+                  await fetch(`https://backend-sistema-gestion.onrender.com/api/ingresos/${item.id}`, {
                     method: "DELETE"
                   });
                   // recargar datos
-                  const res = await fetch("http://localhost:5000/api/ingresos");
+                  const res = await fetch("https://backend-sistema-gestion.onrender.com/api/ingresos");
                   const data = await res.json();
                   setTabla(data.body);
                 }}
@@ -115,11 +115,11 @@ export function TableCTN({ tabla, setTabla, setCTNEditando }) {
               <button
                 className="btn-eliminar"
                 onClick={async () => {
-                  await fetch(`http://localhost:5000/api/ctn/${item.id}`, {
+                  await fetch(`https://backend-sistema-gestion.onrender.com/api/ctn/${item.id}`, {
                     method: "DELETE"
                   });
                   // recargar datos
-                  const res = await fetch("http://localhost:5000/api/ctn");
+                  const res = await fetch("https://backend-sistema-gestion.onrender.com/api/ctn");
                   const data = await res.json();
                   setTabla(data.body);
                 }}
@@ -169,11 +169,11 @@ export function TableFacturas({ tabla, setTabla, setFacturaEditando, setFacturaV
               <button
                 className="btn-eliminar"
                 onClick={async () => {
-                  await fetch(`http://localhost:5000/api/facturas/${item.id}`, {
+                  await fetch(`https://backend-sistema-gestion.onrender.com/api/facturas/${item.id}`, {
                     method: "DELETE"
                   });
                   // recargar datos
-                  const res = await fetch("http://localhost:5000/api/facturas");
+                  const res = await fetch("https://backend-sistema-gestion.onrender.com/api/facturas");
                   const data = await res.json();
                   setTabla(data.body);
                 }}

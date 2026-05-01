@@ -3,7 +3,7 @@ import "../styles/Formulario.css";
 
 export default function FormularioProductores({ tabla, setTabla, productor, cerrarFormulario, obtenerDatos }) {
   const [nombre, setNombre] = useState("");
-  const [tipo, setTipo] = useState("");
+  const [tipo, setTipo] = useState("FOB");
   const [precio, setPrecio] = useState("");
 
   useEffect(() => {
@@ -25,14 +25,14 @@ export default function FormularioProductores({ tabla, setTabla, productor, cerr
 
     if (productor) {
       // EDITAR
-      await fetch(`http://localhost:5000/api/productores/${productor.id}`, {
+      await fetch(`https://backend-sistema-gestion.onrender.com/api/productores/${productor.id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(datos)
       });
     } else {
       // CREAR
-      await fetch("http://localhost:5000/api/productores", {
+      await fetch("https://backend-sistema-gestion.onrender.com/api/productores", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(datos)

@@ -4,7 +4,7 @@ import "../styles/Formulario.css";
 export default function FormularioIngresos({ tabla, setTabla, ingreso, cerrarFormulario, obtenerDatos }) {
   const [fecha, setFecha] = useState("");
   const [productor, setProductor] = useState("");
-  const [tipo, setTipo] = useState("");
+  const [tipo, setTipo] = useState("FOB");
   const [cantidad, setCantidad] = useState("");
   const [ctn, setCTN] = useState("");
 
@@ -28,19 +28,20 @@ export default function FormularioIngresos({ tabla, setTabla, ingreso, cerrarFor
         fecha,
         productor_id: productor,
         ctn_id: ctn,
-        cantidad
+        cantidad,
+        tipo
       }
 
     if (ingreso) {
       // EDITAR
-      await fetch(`http://localhost:5000/api/ingresos/${ingreso.id}`, {
+      await fetch(`https://backend-sistema-gestion.onrender.com/api/ingresos/${ingreso.id}`, {
         method: "PUT",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(datos)
       });
     } else {
       // AGREGAR
-       await fetch(`http://localhost:5000/api/ingresos`, {
+       await fetch(`https://backend-sistema-gestion.onrender.com/api/ingresos`, {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(datos)
@@ -62,7 +63,10 @@ export default function FormularioIngresos({ tabla, setTabla, ingreso, cerrarFor
       </div>
       <div className="form-row">
         <label>Tipo:</label>
-        <input type="text" value={tipo} onChange={(e) => setTipo(e.target.value)} />
+        <select value={tipo} onChange={(e) => setTipo(e.target.value)}>
+          <option value="FOB">FOB</option>
+          <option value="EXW">EXW</option>
+        </select>
       </div>
       <div className="form-row">
         <label>Cantidad:</label>

@@ -5,7 +5,7 @@ import FormularioCTN from "../components/FormularioCTN.jsx";
 import "../styles/CTN.css";
 import {useState, useEffect} from "react";
 
-const API = "http://localhost:5000/api/ctn";
+const API = "https://backend-sistema-gestion.onrender.com/api/ctn";
 
 export default function Ctn(){
     const [tabla, setTabla] = useState([]);

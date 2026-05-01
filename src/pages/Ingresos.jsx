@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { TableIngreso as Table } from "../components/Table.jsx";
 import FormularioIngresos from "../components/FormularioIngresos"
 
-const API = "http://localhost:5000/api/ingresos";
+const API = "https://backend-sistema-gestion.onrender.com/api/ingresos";
 
 export default function Ingresos(){
     const [tabla, setTabla] = useState([]);

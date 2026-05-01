@@ -6,7 +6,7 @@ import ModalFactura from "../components/ModalFactura.jsx";
 import "../styles/Facturas.css";
 import {useState, useEffect} from "react";
 
-const API = "http://localhost:5000/api/ctn";
+const API = "https://backend-sistema-gestion.onrender.com/api/ctn";
 
 export default function Facturas(){
     const [tabla, setTabla] = useState([]);
@@ -21,7 +21,7 @@ export default function Facturas(){
     };
 
     async function obtenerDatos(){
-        const res = await fetch("http://localhost:5000/api/facturas");
+        const res = await fetch("https://backend-sistema-gestion.onrender.com/api/facturas");
         const data = await res.json();
         setTabla(data.body);
     }

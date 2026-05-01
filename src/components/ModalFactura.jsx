@@ -15,7 +15,7 @@ export default function ModalFactura({ factura, onClose }) {
     async function cargarDetalles() {
         try {
         const res = await fetch(
-            `http://localhost:5000/api/facturas/${factura.id}/detalles`
+            `https://backend-sistema-gestion.onrender.com/api/facturas/${factura.id}/detalles`
         );
         const data = await res.json();
         setDetalles(data.body);

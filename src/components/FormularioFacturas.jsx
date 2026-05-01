@@ -63,14 +63,14 @@ export default function FormularioFacturas({ tabla, setTabla, factura, cerrarFor
 
         if (factura) {
             // EDITAR
-            await fetch(`http://localhost:5000/api/facturas/${factura.id}`, {
+            await fetch(`https://backend-sistema-gestion.onrender.com/api/facturas/${factura.id}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(datos)
             });
         } else {
             // AGREGAR
-            await fetch(`http://localhost:5000/api/facturas`, {
+            await fetch(`https://backend-sistema-gestion.onrender.com/api/facturas`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(datos)
@@ -91,7 +91,7 @@ export default function FormularioFacturas({ tabla, setTabla, factura, cerrarFor
 
         async function cargarDetalles() {
         try {
-            const res = await fetch(`http://localhost:5000/api/facturas/${factura.id}/detalles`);
+            const res = await fetch(`https://backend-sistema-gestion.onrender.com/api/facturas/${factura.id}/detalles`);
             const data = await res.json();
             setDetalles(data.body);
         } catch (error) {

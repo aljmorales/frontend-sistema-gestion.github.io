@@ -5,7 +5,7 @@ import FormularioProductores from "../components/FormularioProductores.jsx";
 import "../styles/Productores.css";
 import {useState, useEffect} from "react";
 
-const API = "http://localhost:5000/api/productores";
+const API = "https://backend-sistema-gestion.onrender.com/api/productores";
 
 export default function Productores(){
     const [tabla, setTabla] = useState([]);
