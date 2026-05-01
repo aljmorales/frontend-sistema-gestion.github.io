@@ -1,0 +1,66 @@
+.facturas-container {
+  background-color: #fdf5e6; /* tono crema */
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+
+/* Título */
+.facturas-title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* Acciones (botón + búsqueda) */
+.facturas-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+/* Botón */
+.btn-nuevo {
+  background-color: #826AED;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-nuevo:hover {
+  background-color: black; /* resalta fuerte */
+  transform: scale(1.05);
+}
+
+/* Bloque de búsqueda */
+.busqueda {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.busqueda label {
+  font-weight: 500;
+  color: #444;
+}
+
+.input-buscar {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+.input-buscar:focus {
+  border-color: #826AED;
+  outline: none;
+}

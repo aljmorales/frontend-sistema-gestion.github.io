@@ -1,0 +1,58 @@
+.form-productor, .form-ingreso, .form-ctn, .form-factura{
+  background: #fff;
+  padding: 20px 12px;
+  border-radius: 8px;
+  width: fit-content;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+label {
+  font-size: 12px;
+  margin-right: 6px;
+}
+
+input {
+  height: 22px;
+  font-size: 12px;
+  padding: 2px 6px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 150px; /* pequeño */
+}
+
+.form-factura input{
+  margin-right: 8px;
+  width: 90px;
+}
+
+input[type="number"] {
+  width: 100px;
+}
+input[type="date"] {
+  width: 105px;
+}
+
+.btn-guardar {
+  background: #22c55e; /* verde */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-guardar:hover {
+  background: #16a34a;
+}
+
+.form-productor, .form-ingreso, .form-ctn, .form-factura {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,89 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.modal-contenido {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.modal-cerrar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: red;
+    color: white;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.modal-info {
+    margin-bottom: 15px;
+}
+
+.tabla-detalle {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-detalle th,
+.tabla-detalle td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+h2, h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.div-botones{
+    display: flex; 
+    gap: 10px; 
+    margin-bottom: 10px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    .modal-contenido,
+    .modal-contenido * {
+        visibility: visible;
+    }
+
+    .modal-contenido {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .modal-cerrar {
+        display: none;
+    }
+}

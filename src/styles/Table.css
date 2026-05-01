@@ -1,0 +1,53 @@
+.tabla-productores, .tabla-ingresos, .tabla-ctn {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  background-color: white;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.8rem;
+  text-align: center;
+}
+
+.tabla-productores th, .tabla-ingresos th, .tabla-ctn th {
+  background-color: #826AED;
+  color: white;
+}
+
+.tabla-productores tr:nth-child(even), 
+.tabla-ingresos tr:nth-child(even), 
+.tabla-ctn tr:nth-child(even) {
+  background-color: #fdf5e6; /* filas alternadas con crema */
+}
+
+.btn-editar, .btn-ver {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  margin-right: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btn-ver{
+  background-color: #e8e168;
+}
+
+.btn-eliminar {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-editar:hover {
+  background-color: #388E3C;
+}
+
+.btn-eliminar:hover {
+  background-color: #D32F2F;
+}
