@@ -78,7 +78,6 @@ function App() {
             path="/reportes"
             element={
               <div style={{ padding: "20px" }}>
-                
                 <h2 style={{ marginBottom: "10px" }}>
                   📊 Análisis de Ventas y Facturación
                 </h2>
@@ -88,38 +87,6 @@ function App() {
                   comportamiento de ventas. Este reporte simula el análisis de datos
                   generados por el sistema de facturación.
                 </p>
-
-                <div style={{ marginBottom: "15px" }}>
-                  <a
-                    href={pdf}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{
-                      padding: "10px 15px",
-                      background: "#2e7d32",
-                      color: "#fff",
-                      textDecoration: "none",
-                      borderRadius: "5px",
-                      marginRight: "10px"
-                    }}
-                  >
-                    📄 Abrir en nueva pestaña
-                  </a>
-
-                  <a
-                    href={pdf}
-                    download
-                    style={{
-                      padding: "10px 15px",
-                      background: "#1565c0",
-                      color: "#fff",
-                      textDecoration: "none",
-                      borderRadius: "5px"
-                    }}
-                  >
-                    ⬇ Descargar PDF
-                  </a>
-                </div>
 
                 <div
                   style={{
@@ -132,10 +99,12 @@ function App() {
                   }}
                 >
                   <iframe
-                    src={pdf}
-                    title="Reporte Power BI"
+                    title="PRUEBA"
+                    src="https://app.powerbi.com/view?r=eyJrIjoiYTE0NDdjOGQtNGY1MC00YWRjLWExYjEtMmE1ZTU4ZWYwNDkzIiwidCI6ImM0YTY2YzM0LTJiYjctNDUxZi04YmUxLWIyYzI2YTQzMDE1OCIsImMiOjR9"
                     width="100%"
                     height="100%"
+                    frameBorder="0"
+                    allowFullScreen={true}
                     style={{ border: "none" }}
                   />
                 </div>
